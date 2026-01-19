@@ -1,0 +1,209 @@
+{% extends 'recipes/base.html' %}
+
+{% block title %}{{ recipe.title }} - NaijaRecipeBox{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" x-data="{ printMode: false }">
+    
+    <nav class="mb-6 flex items-center text-sm font-medium text-gray-400">
+        <a href="{% url 'recipes:recipe_list' %}" class="hover:text-naija-green transition-colors">Recipes</a>
+        <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        {% if recipe.ethnicity %}
+            <a href="{% url 'recipes:recipe_list' %}?ethnicity={{ recipe.ethnicity.slug }}" class="hover:text-naija-green transition-colors">{{ recipe.ethnicity.name }}</a>
+            <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        {% endif %}
+        <span class="text-gray-800 truncate max-w-[200px] sm:max-w-none">{{ recipe.title }}</span>
+    </nav>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12">
+        
+        <div class="relative h-[300px] lg:h-[400px] w-full rounded-3xl overflow-hidden shadow-soft group">
+            {% if recipe.image %}
+                <img src="{{ recipe.image.url }}" 
+                     alt="{{ recipe.title }}"
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            {% else %}
+                <div class="w-full h-full bg-gray-100 flex items-center justify-center image-skeleton">
+                    <span class="text-6xl">🍲</span>
+                </div>
+            {% endif %}
+            
+            {% if recipe.category %}
+                <div class="absolute top-4 left-4">
+                    <span class="px-3 py-1.5 bg-white/95 backdrop-blur-md text-gray-900 text-xs font-bold uppercase tracking-wider rounded-lg shadow-sm">
+                        {{ recipe.category.name }}
+                    </span>
+                </div>
+            {% endif %}
+        </div>
+        
+        <div class="flex flex-col justify-center">
+            <div class="flex items-center gap-2 mb-2">
+                {% if recipe.ethnicity %}
+                    <span class="text-naija-green font-bold tracking-wide uppercase text-sm">
+                        {{ recipe.ethnicity.name }} Cuisine
+                    </span>
+                {% endif %}
+            </div>
+            
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                {{ recipe.title }}
+            </h1>
+            
+            <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                {{ recipe.description }}
+            </p>
+            
+            <div class="flex flex-wrap items-center gap-4 sm:gap-8 py-6 border-y border-gray-100">
+                <div class="flex items-center gap-3">
+                    <div class="p-2.5 bg-green-50 text-naija-green rounded-full">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-medium uppercase tracking-wider">Prep</p>
+                        <p class="text-sm font-bold text-gray-900">{{ recipe.prep_time }}m</p>
+                    </div>
+                </div>
+                
+                <div class="w-px h-8 bg-gray-100"></div>
+                
+                <div class="flex items-center gap-3">
+                    <div class="p-2.5 bg-orange-50 text-orange-500 rounded-full">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-medium uppercase tracking-wider">Cook</p>
+                        <p class="text-sm font-bold text-gray-900">{{ recipe.cook_time }}m</p>
+                    </div>
+                </div>
+
+                <div class="w-px h-8 bg-gray-100"></div>
+                
+                <div class="flex items-center gap-3">
+                    <div class="p-2.5 bg-blue-50 text-blue-500 rounded-full">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-medium uppercase tracking-wider">Serves</p>
+                        <p class="text-sm font-bold text-gray-900">{{ recipe.servings }}</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 flex gap-3">
+                <button @click="window.print()" class="flex items-center gap-2 px-6 py-3 bg-gray-100 text-gray-700 font-bold rounded-xl hover:bg-gray-200 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                    Print Recipe
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        
+        <div class="lg:col-span-4 space-y-8 sticky top-24">
+            <div class="bg-white rounded-3xl p-6 shadow-soft border border-gray-50">
+                <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                    <span>🛒</span> Ingredients
+                </h3>
+                
+                <ul class="space-y-4">
+                    {% for ingredient in recipe.ingredients.all %}
+                        <li class="group flex items-start select-none cursor-pointer" x-data="{ checked: false }" @click="checked = !checked">
+                            <div class="relative flex items-center justify-center flex-shrink-0 w-6 h-6 mt-0.5 border-2 rounded-full transition-colors duration-200"
+                                 :class="checked ? 'bg-naija-green border-naija-green' : 'border-gray-200 group-hover:border-naija-green'">
+                                <svg class="w-3.5 h-3.5 text-white transition-opacity duration-200" :class="checked ? 'opacity-100' : 'opacity-0'" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            
+                            <div class="ml-3 transition-opacity duration-200" :class="checked ? 'opacity-40' : 'opacity-100'">
+                                <span class="font-bold text-gray-900">{{ ingredient.quantity }} {{ ingredient.get_unit_display }}</span>
+                                <span class="text-gray-600">{{ ingredient.name }}</span>
+                                {% if ingredient.notes %}
+                                    <p class="text-xs text-gray-400 mt-0.5 italic">{{ ingredient.notes }}</p>
+                                {% endif %}
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            {% if recipe.notes.all %}
+                <div class="bg-yellow-50 rounded-3xl p-6 border border-yellow-100">
+                    <h4 class="text-sm font-bold text-yellow-800 uppercase tracking-wider mb-3 flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Chef's Notes
+                    </h4>
+                    <ul class="space-y-2">
+                        {% for note in recipe.notes.all %}
+                            <li class="text-sm text-yellow-900/80 leading-relaxed">• {{ note.note }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+        
+        <div class="lg:col-span-8">
+            <div class="bg-white rounded-3xl p-8 lg:p-10 shadow-soft border border-gray-50">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
+                    <span>👨‍🍳</span> Instructions
+                </h2>
+                
+                <div class="prose prose-lg prose-green max-w-none text-gray-600">
+                    {{ recipe.instructions|linebreaks }}
+                </div>
+                
+                <div class="mt-12 pt-8 border-t border-gray-100 text-center">
+                    <p class="text-gray-400 text-sm mb-4">Did you make this recipe?</p>
+                    <button class="inline-flex items-center gap-2 text-naija-green font-bold hover:text-naija-dark transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        Share a photo on Instagram
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    {% if related_recipes %}
+        <div class="mt-20 border-t border-gray-200 pt-16">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-2xl font-bold text-gray-900">You might also like</h2>
+                <a href="{% url 'recipes:recipe_list' %}" class="text-sm font-medium text-naija-green hover:text-naija-dark">View all</a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {% for related in related_recipes %}
+                    <article class="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-soft hover:border-green-100 transition-all duration-300 flex flex-col h-full">
+                        <a href="{% url 'recipes:recipe_detail' related.slug %}" class="relative block overflow-hidden aspect-[4/3]">
+                            {% if related.image %}
+                                <img src="{{ related.image.url }}" 
+                                     alt="{{ related.title }}"
+                                     loading="lazy"
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            {% else %}
+                                <div class="w-full h-full bg-gray-50 flex items-center justify-center text-4xl">🍲</div>
+                            {% endif %}
+                        </a>
+                        
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="text-base font-bold text-gray-900 leading-tight group-hover:text-naija-green transition-colors mb-1 line-clamp-1">
+                                <a href="{% url 'recipes:recipe_detail' related.slug %}">{{ related.title }}</a>
+                            </h3>
+                            
+                            <div class="mt-auto pt-3 flex items-center justify-between text-xs text-gray-400 font-medium">
+                                <span class="flex items-center gap-1">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    {{ related.total_time }}m
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+    
+</div>
+{% endblock %}

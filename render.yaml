@@ -1,0 +1,26 @@
+databases:
+  - name: naija_recipes_db
+    databaseName: naija_recipes_db
+    user: naija_recipes_user
+    plan: free
+
+services:
+  - type: web
+    name: naija-recipes
+    runtime: python
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn naija_recipes.wsgi:application"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: False
+      - key: DATABASE_URL
+        fromDatabase:
+          name: naija_recipes_db
+          property: connectionString
+      - key: ALLOWED_HOSTS
+        sync: false

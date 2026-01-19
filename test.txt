@@ -1,0 +1,112 @@
+class EthnicityViewSet(viewsets.ModelViewSet):
+    # Endpoint for Yoruba, Igbo, Hausa, etc.
+    queryset = Ethnicity.objects.all()
+    serializer_class = EthnicitySerializer
+    lookup_field = 'slug'
+
+    filter_backends = [filters.SearchFilter, filters.OrderingFilter]
+    search_fields = ['name', 'description']
+    ordering_fields = ['name', 'created_at']
+
+class CategoryViewSet(viewsets.ModelViewSet):
+    # Endpoint for recipe categories
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+    lookup_field = 'slug'
+
+    filter_backends = [filters.SearchFilter, filters.OrderingFilter]
+    search_fields = ['name', 'description']
+    ordering_fields = ['name', 'created_at']
+
+
+class RecipeViewSet(viewsets.ModelViewSet):
+    # Endpoint for recipes with filtering
+    queryset = Recipe.objects.select_related('category', 'ethnicity').prefetch_related('ingredients', 'notes').filter(is_active=True)
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filter_fields = ['ethnicity', 'category', 'servings']
+    search_fields = ['title', 'description', 'ingredients__name', 'ethnicity__name', 'category__name']
+    ordering_fields = [ 'created_at', 'title', 'prep_time', 'cook_time', 'servings']
+    ordering = ['-created_at']
+    lookup_field = 'slug'
+
+    # Return different serializers for list and detail views
+    def get_serializer_class(self):
+        if self.action == 'list':
+            return RecipeListSerializer
+        elif self.action in ['create', 'update', 'partial_update']:
+            return RecipeCreateUpdateSerializer
+        return RecipeDetailSerializer
+    
+    @action(detail=False, methods=['get'])
+    def by_ethnicity(self, request):
+        # custom endpoint to filter recipes base on ethnic group /api/v1/recipes/by_ethnicity/?ethnicity=yoruba
+        ethnicity_slug = request.query_params.get('ethnicity')
+
+        if not ethnicity_slug:
+            return Response({'error': 'ethnicity parameter is required (e.g., Yoruba, Igbo, Hausa)'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        recipes = self.queryset.filter(ethnicity__slug=ethnicity_slug)
+        page = self.paginate_queryset(recipes)
+        if page is not None:
+            serializer = RecipeListSerializer(page, many=True)
+            return self.get_paginated_response(serializer.data)
+        
+        serializer = RecipeListSerializer(recipes, many=True)
+        return Response(serializer.data)
+    
+    @action(detail=False, methods=['get'])
+    def quick_recipes(self, request):
+        # custom endpoint to get quick recipes /api/v1/recipes/quick_recipes/
+    
+        max_time = int(request.query_params.get('max_time', 45))
+        
+        quick_recipes = self.queryset.filter(
+            prep_time__lte=max_time,
+            cook_time__lte=max_time
+        )
+        
+        # Filter by total time
+        quick_recipes = [
+            recipe for recipe in quick_recipes 
+            if recipe.total_time <= max_time
+        ]
+        
+        page = self.paginate_queryset(quick_recipes)
+        if page is not None:
+            serializer = RecipeListSerializer(page, many=True)
+            return self.get_paginated_response(serializer.data)
+        
+        serializer = RecipeListSerializer(quick_recipes, many=True)
+        return Response(serializer.data)
+    
+    
+    @action(detail=False, methods=['get'])
+    def statistics(self, request):
+        # custom endpoint to get recipe statistics /api/v1/recipes/statistics/
+        from django.db.models import Count, Avg
+        
+        stats = {
+            'total_recipes': self.queryset.count(),
+            'by_ethnicity': list(
+                Ethnicity.objects.annotate(
+                    recipe_count=Count('recipes', filter=models.Q(recipes__is_active=True))
+                ).values('name', 'recipe_count')
+            ),
+            'by_category': list(
+                Category.objects.annotate(
+                    recipe_count=Count('recipes', filter=models.Q(recipes__is_active=True))
+                ).values('name', 'recipe_count')
+            ),
+            'by_difficulty': list(
+                self.queryset.values('difficulty').annotate(
+                    count=Count('id')
+                )
+            ),
+            'average_prep_time': self.queryset.aggregate(Avg('prep_time'))['prep_time__avg'],
+            'average_cook_time': self.queryset.aggregate(Avg('cook_time'))['cook_time__avg'],
+        }
+        
+        return Response(stats)
+
+
+

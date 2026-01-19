@@ -1,0 +1,698 @@
+{
+  "recipes": [
+    {
+      "title": "Jollof Rice",
+      "description": "The iconic West African one-pot rice dish cooked in a rich tomato sauce. Nigerian Jollof is known for its distinctive smoky flavor and is more than just a dish - it's a cultural icon.",
+      "ethnicity": "yoruba",
+      "category": "rice-dishes",
+      "instructions": "1. Blend tomatoes, red bell peppers, scotch bonnet peppers, and onions to make a smooth paste.\n2. Heat vegetable oil in a large pot, add tomato paste and fry for 2 minutes.\n3. Add the blended mixture and fry until oil floats to the top (about 20-25 minutes).\n4. Add chicken stock, curry powder, thyme, seasoning cubes, and salt. Bring to boil.\n5. Add washed parboiled rice, stir well to combine.\n6. Cover tightly and cook on low heat for 30-35 minutes without stirring.\n7. Allow to steam until rice is tender and has absorbed all liquid.\n8. Serve hot with fried plantains and chicken.",
+      "prep_time": 20,
+      "cook_time": 45,
+      "servings": 6,
+      "ingredients": [
+        { "name": "Long grain parboiled rice", "quantity": 3, "unit": "cup" },
+        { "name": "Tomatoes", "quantity": 5, "unit": "piece" },
+        {
+          "name": "Red bell peppers (tatashe)",
+          "quantity": 3,
+          "unit": "piece"
+        },
+        {
+          "name": "Scotch bonnet peppers (ata rodo)",
+          "quantity": 2,
+          "unit": "piece"
+        },
+        { "name": "Onions", "quantity": 2, "unit": "piece" },
+        { "name": "Tomato paste", "quantity": 3, "unit": "tbsp" },
+        { "name": "Vegetable oil", "quantity": 120, "unit": "ml" },
+        { "name": "Chicken stock", "quantity": 4, "unit": "cup" },
+        { "name": "Curry powder", "quantity": 1, "unit": "tbsp" },
+        { "name": "Thyme", "quantity": 1, "unit": "tsp" },
+        { "name": "Seasoning cubes", "quantity": 3, "unit": "cube" },
+        { "name": "Salt", "quantity": 1, "unit": "to_taste" }
+      ],
+      "notes": [
+        "For the smoky 'party jollof' flavor, allow the bottom to burn slightly",
+        "You can add vegetables like green beans, carrots, and peas",
+        "Coconut milk can be added for extra richness"
+      ]
+    },
+    {
+      "title": "Egusi Soup",
+      "description": "A popular Nigerian soup made with ground melon seeds, leafy vegetables, and assorted meats. This nutrient-rich soup is enjoyed across Nigeria and is packed with protein and flavor.",
+      "ethnicity": "igbo",
+      "category": "soups",
+      "instructions": "1. Season and cook assorted meat with onions and seasoning cubes until tender.\n2. Grind or blend egusi seeds (or use pre-ground).\n3. Heat palm oil in a pot, add chopped onions and fry briefly.\n4. Add blended peppers and tomatoes, fry until oil floats to the top.\n5. Add meat stock and bring to boil.\n6. Mix egusi with small amount of water to form thick paste.\n7. Add egusi paste to pot, stir well and cook for 15 minutes on medium heat.\n8. Add stockfish, crayfish, and seasoning. Cook for 5 minutes.\n9. Add washed and chopped ugu leaves, stir gently.\n10. Simmer for 5 minutes and serve hot.",
+      "prep_time": 25,
+      "cook_time": 40,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Egusi (melon seeds)",
+          "quantity": 2,
+          "unit": "cup",
+          "notes": "ground"
+        },
+        { "name": "Palm oil", "quantity": 150, "unit": "ml" },
+        { "name": "Assorted meat (beef, goat)", "quantity": 500, "unit": "g" },
+        { "name": "Stockfish", "quantity": 100, "unit": "g" },
+        {
+          "name": "Ugu leaves (pumpkin leaves)",
+          "quantity": 2,
+          "unit": "handful",
+          "notes": "washed and chopped"
+        },
+        { "name": "Ground crayfish", "quantity": 3, "unit": "tbsp" },
+        {
+          "name": "Scotch bonnet peppers",
+          "quantity": 3,
+          "unit": "piece",
+          "notes": "blended"
+        },
+        {
+          "name": "Tomatoes",
+          "quantity": 2,
+          "unit": "piece",
+          "notes": "blended"
+        },
+        {
+          "name": "Onions",
+          "quantity": 1,
+          "unit": "piece",
+          "notes": "chopped"
+        },
+        { "name": "Seasoning cubes", "quantity": 3, "unit": "cube" },
+        { "name": "Salt", "quantity": 1, "unit": "to_taste" }
+      ],
+      "notes": [
+        "You can use spinach or bitter leaf instead of ugu",
+        "Add periwinkles for authentic taste",
+        "Don't over-stir to maintain the egusi texture"
+      ]
+    },
+    {
+      "title": "Tuwo Shinkafa",
+      "description": "A traditional Northern Nigerian staple made from soft rice. It's a thick pudding commonly eaten with various soups, especially popular among the Hausa people.",
+      "ethnicity": "hausa",
+      "category": "swallow",
+      "instructions": "1. Wash short grain rice thoroughly.\n2. Boil rice with plenty of water until very soft and mushy (about 25-30 minutes).\n3. Drain excess water if any remains.\n4. Mash the cooked rice thoroughly with a wooden spoon or pestle until smooth.\n5. Return to low heat and keep stirring vigorously until it forms a smooth, stretchy dough.\n6. Cover and let it steam for 2-3 minutes.\n7. Mold into balls or serve in bowl.\n8. Serve hot with Miyan Kuka, Miyan Taushe, or any soup of choice.",
+      "prep_time": 5,
+      "cook_time": 30,
+      "servings": 4,
+      "ingredients": [
+        { "name": "Short grain white rice", "quantity": 2, "unit": "cup" },
+        { "name": "Water", "quantity": 6, "unit": "cup" }
+      ],
+      "notes": [
+        "Use short grain rice for better consistency",
+        "The mixture should be very smooth with no lumps",
+        "Commonly served with miyan kuka, miyan taushe, or okro soup",
+        "Can be made with tuwo masara (corn flour) as alternative"
+      ]
+    },
+    {
+      "title": "Efo Riro",
+      "description": "A rich Yoruba vegetable soup made with spinach or local efo tete, cooked with peppers, onions, tomatoes, and assorted meats or fish. Often used as a benchmark for judging a cook's abilities.",
+      "ethnicity": "yoruba",
+      "category": "soups",
+      "instructions": "1. Blend peppers, tomatoes, and onions together.\n2. Cook assorted meat with seasonings until tender.\n3. Heat palm oil in pot, fry locust beans (iru) briefly.\n4. Add blended pepper mixture and fry until oil rises (15-20 minutes).\n5. Add meat stock, ground crayfish, and seasonings.\n6. Add cooked meats and fish, simmer for 10 minutes.\n7. Add washed and chopped spinach or efo tete.\n8. Stir gently and cook for 5 minutes.\n9. Adjust seasoning and serve hot.",
+      "prep_time": 20,
+      "cook_time": 35,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Spinach or Efo tete",
+          "quantity": 3,
+          "unit": "bunch",
+          "notes": "washed and chopped"
+        },
+        { "name": "Palm oil", "quantity": 150, "unit": "ml" },
+        { "name": "Assorted meat", "quantity": 500, "unit": "g" },
+        { "name": "Stockfish", "quantity": 100, "unit": "g" },
+        {
+          "name": "Shrimp",
+          "quantity": 100,
+          "unit": "g",
+          "notes": "dried or fresh"
+        },
+        { "name": "Locust beans (iru)", "quantity": 2, "unit": "tbsp" },
+        { "name": "Ground crayfish", "quantity": 3, "unit": "tbsp" },
+        { "name": "Red bell peppers", "quantity": 4, "unit": "piece" },
+        { "name": "Scotch bonnet peppers", "quantity": 3, "unit": "piece" },
+        { "name": "Tomatoes", "quantity": 4, "unit": "piece" },
+        { "name": "Onions", "quantity": 2, "unit": "piece" },
+        { "name": "Seasoning cubes", "quantity": 3, "unit": "cube" },
+        { "name": "Salt", "quantity": 1, "unit": "to_taste" }
+      ],
+      "notes": [
+        "Can use different leafy greens like kale or chard",
+        "Locust beans add authentic flavor but can be omitted",
+        "Add pomo (cow skin) for extra texture"
+      ]
+    },
+    {
+      "title": "Ofe Nsala (White Soup)",
+      "description": "A traditional Igbo delicacy from Anambra state, known as white soup because it's prepared without palm oil. Often reserved for special occasions and nursing mothers, featuring catfish and yam.",
+      "ethnicity": "igbo",
+      "category": "soups",
+      "instructions": "1. Season catfish with salt and steam for 10 minutes.\n2. Peel and boil yam until very soft.\n3. Pound or blend yam to form smooth paste.\n4. Cook assorted meat with onions and seasonings until tender.\n5. Add meat stock to pot with pounded yam paste, stir to dissolve.\n6. Add steamed catfish, ground crayfish, and pepper.\n7. Add utazi leaves and scent leaves.\n8. Simmer for 10 minutes, stirring occasionally.\n9. Adjust seasoning and serve hot.",
+      "prep_time": 20,
+      "cook_time": 35,
+      "servings": 5,
+      "ingredients": [
+        {
+          "name": "Fresh catfish",
+          "quantity": 2,
+          "unit": "piece",
+          "notes": "medium sized"
+        },
+        { "name": "White yam", "quantity": 300, "unit": "g" },
+        { "name": "Assorted meat", "quantity": 300, "unit": "g" },
+        { "name": "Ground crayfish", "quantity": 3, "unit": "tbsp" },
+        {
+          "name": "Utazi leaves",
+          "quantity": 1,
+          "unit": "handful",
+          "notes": "sliced thin"
+        },
+        {
+          "name": "Scent leaves",
+          "quantity": 1,
+          "unit": "handful",
+          "notes": "chopped"
+        },
+        {
+          "name": "Scotch bonnet pepper",
+          "quantity": 2,
+          "unit": "piece",
+          "notes": "ground"
+        },
+        { "name": "Onions", "quantity": 1, "unit": "piece" },
+        { "name": "Seasoning cubes", "quantity": 2, "unit": "cube" },
+        { "name": "Salt", "quantity": 1, "unit": "to_taste" }
+      ],
+      "notes": [
+        "Traditionally served to nursing mothers",
+        "The yam acts as natural thickener",
+        "Can use chicken instead of catfish"
+      ]
+    },
+    {
+      "title": "Miyan Taushe",
+      "description": "A popular Hausa pumpkin soup made with groundnuts, creating a creamy, hearty dish. The pumpkin gives it a unique sweetness that balances perfectly with spicy peppers.",
+      "ethnicity": "hausa",
+      "category": "soups",
+      "instructions": "1. Season and cook beef until tender.\n2. Peel and dice pumpkin into small cubes.\n3. Blend pumpkin with tomatoes, peppers, and onions until smooth.\n4. Grind groundnuts (peanuts) separately.\n5. Heat palm oil, fry chopped onions briefly.\n6. Add blended pumpkin mixture and fry for 10 minutes.\n7. Add meat stock and ground peanuts, stir well.\n8. Add cooked meat, dried fish, and seasonings.\n9. Simmer for 15 minutes until thickened.\n10. Add washed spinach, cook for 5 minutes.\n11. Serve with Tuwo Shinkafa or Masa.",
+      "prep_time": 20,
+      "cook_time": 40,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Pumpkin",
+          "quantity": 250,
+          "unit": "g",
+          "notes": "peeled and cubed"
+        },
+        {
+          "name": "Groundnuts (peanuts)",
+          "quantity": 1,
+          "unit": "cup",
+          "notes": "roasted"
+        },
+        { "name": "Beef", "quantity": 400, "unit": "g" },
+        { "name": "Dried fish", "quantity": 100, "unit": "g" },
+        {
+          "name": "Spinach",
+          "quantity": 1,
+          "unit": "handful",
+          "notes": "chopped"
+        },
+        { "name": "Palm oil", "quantity": 100, "unit": "ml" },
+        { "name": "Tomatoes", "quantity": 2, "unit": "piece" },
+        { "name": "Scotch bonnet peppers", "quantity": 2, "unit": "piece" },
+        { "name": "Onions", "quantity": 1, "unit": "piece" },
+        { "name": "Locust beans (dawadawa)", "quantity": 1, "unit": "tbsp" },
+        { "name": "Ground crayfish", "quantity": 2, "unit": "tbsp" },
+        { "name": "Seasoning cubes", "quantity": 2, "unit": "cube" },
+        { "name": "Salt", "quantity": 1, "unit": "to_taste" }
+      ],
+      "notes": [
+        "The pumpkin gives the soup natural sweetness",
+        "Traditionally served with Masa or Tuwo Shinkafa",
+        "Can use butternut squash as pumpkin substitute"
+      ]
+    },
+    {
+      "title": "Amala with Ewedu and Gbegiri",
+      "description": "A complete Yoruba classic meal featuring dark yam flour swallow (Amala) served with slimy ewedu soup and smooth bean soup (Gbegiri), topped with spicy stew.",
+      "ethnicity": "yoruba",
+      "category": "swallow",
+      "instructions": "Amala: 1. Boil water in a pot. 2. Gradually add yam flour while stirring quickly with wooden spatula. 3. Stir continuously until smooth and stretchy. 4. Cover and steam for 5 minutes.\n\nEwedu: 1. Wash jute leaves thoroughly. 2. Boil with little water for 5 minutes. 3. Blend or use broom to whisk until slimy. 4. Add locust beans and seasonings.\n\nGbegiri: 1. Cook peeled beans until very soft. 2. Blend until smooth. 3. Heat palm oil, fry onions. 4. Add blended beans and cook until thick.\n\nServe Amala with all three for authentic experience.",
+      "prep_time": 30,
+      "cook_time": 45,
+      "servings": 4,
+      "ingredients": [
+        { "name": "Yam flour (elubo)", "quantity": 2, "unit": "cup" },
+        {
+          "name": "Ewedu leaves (jute leaves)",
+          "quantity": 2,
+          "unit": "bunch"
+        },
+        {
+          "name": "Black-eyed beans",
+          "quantity": 1,
+          "unit": "cup",
+          "notes": "peeled"
+        },
+        { "name": "Palm oil", "quantity": 50, "unit": "ml" },
+        { "name": "Locust beans (iru)", "quantity": 1, "unit": "tbsp" },
+        { "name": "Ground crayfish", "quantity": 2, "unit": "tbsp" },
+        { "name": "Onions", "quantity": 1, "unit": "piece" },
+        { "name": "Seasoning cubes", "quantity": 2, "unit": "cube" },
+        { "name": "Salt", "quantity": 1, "unit": "to_taste" }
+      ],
+      "notes": [
+        "Gbegiri is rich in protein and great for pairing",
+        "Use ewedu broom (ijabe) for best texture",
+        "Serve with assorted meat and stew on top"
+      ]
+    },
+    {
+      "title": "Ofe Onugbu (Bitter Leaf Soup)",
+      "description": "A classic Igbo soup made with bitter leaf and cocoyam paste. Despite its name, when properly prepared the bitterness is mild and balanced. Often served at weddings and special occasions.",
+      "ethnicity": "igbo",
+      "category": "soups",
+      "instructions": "1. Wash bitter leaves thoroughly, squeezing repeatedly to remove bitterness (about 10 times).\n2. Peel and boil cocoyam until soft, pound into smooth paste.\n3. Season and cook assorted meat until tender.\n4. Heat palm oil, add chopped onions.\n5. Add blended peppers, fry briefly.\n6. Add meat stock and cocoyam paste, stir to dissolve.\n7. Add washed bitter leaves, stockfish, crayfish.\n8. Add ogiri (fermented locust beans) and seasonings.\n9. Simmer for 15 minutes, stirring occasionally.\n10. Serve hot with fufu or pounded yam.",
+      "prep_time": 30,
+      "cook_time": 40,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Bitter leaves (onugbu)",
+          "quantity": 2,
+          "unit": "handful",
+          "notes": "thoroughly washed"
+        },
+        { "name": "Cocoyam", "quantity": 300, "unit": "g" },
+        { "name": "Assorted meat", "quantity": 500, "unit": "g" },
+        { "name": "Stockfish", "quantity": 100, "unit": "g" },
+        { "name": "Palm oil", "quantity": 120, "unit": "ml" },
+        { "name": "Ground crayfish", "quantity": 3, "unit": "tbsp" },
+        {
+          "name": "Ogiri (fermented locust beans)",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "Scotch bonnet peppers",
+          "quantity": 2,
+          "unit": "piece",
+          "notes": "blended"
+        },
+        { "name": "Onions", "quantity": 1, "unit": "piece" },
+        { "name": "Seasoning cubes", "quantity": 3, "unit": "cube" },
+        { "name": "Salt", "quantity": 1, "unit": "to_taste" }
+      ],
+      "notes": [
+        "Washing bitter leaves properly is crucial",
+        "Cocoyam gives the soup its thick consistency",
+        "Symbolizes celebration in Igbo culture"
+      ]
+    },
+    {
+      "title": "Masa (Hausa Rice Cakes)",
+      "description": "Fluffy rice cakes with a slightly tangy flavor due to fermentation. A special delicacy from Northern Nigeria, often enjoyed for breakfast or as a snack with soup or spicy yaji.",
+      "ethnicity": "hausa",
+      "category": "snacks",
+      "instructions": "1. Divide tuwo rice into two equal parts.\n2. Soak first half with potash water for 8-10 hours.\n3. Boil second half with water until very soft, mash to pulp.\n4. Grind the soaked rice finely.\n5. Mix ground rice with mashed rice.\n6. Add sugar, salt, and yeast. Stir well.\n7. Allow to froth for 30 minutes (batter should be runny).\n8. Grease masa pan with oil.\n9. Pour batter into pan molds.\n10. Cook until golden brown on both sides (3-4 minutes each).\n11. Serve hot with miyan taushe or yaji.",
+      "prep_time": 25,
+      "cook_time": 20,
+      "servings": 6,
+      "ingredients": [
+        { "name": "Tuwo rice (short grain)", "quantity": 3, "unit": "cup" },
+        { "name": "Potash", "quantity": 1, "unit": "tsp" },
+        { "name": "Sugar", "quantity": 2, "unit": "tbsp" },
+        { "name": "Yeast", "quantity": 1, "unit": "tsp" },
+        { "name": "Vegetable oil", "quantity": 50, "unit": "ml" },
+        { "name": "Salt", "quantity": 1, "unit": "pinch" }
+      ],
+      "notes": [
+        "Masa pan has round molds for traditional shape",
+        "Batter should be slightly tangy from fermentation",
+        "Often served with Miyan Taushe soup",
+        "Can be eaten sweet or savory"
+      ]
+    },
+    {
+      "title": "Akara (Bean Cakes)",
+      "description": "Deep-fried bean balls made from ground black-eyed peas and spices. Crispy outside, soft inside. A popular Nigerian breakfast or snack food, common across all ethnic groups.",
+      "ethnicity": "yoruba",
+      "category": "snacks",
+      "instructions": "1. Soak black-eyed beans overnight, peel off skin by rubbing.\n2. Blend beans with onions and peppers, add minimal water for thick consistency.\n3. Add salt and seasoning cube to batter.\n4. Whisk batter vigorously to incorporate air (makes it fluffy).\n5. Heat vegetable oil in deep pot until very hot.\n6. Scoop batter with spoon and drop into hot oil.\n7. Fry until golden brown on all sides (about 3-4 minutes).\n8. Remove and drain on paper towels.\n9. Serve hot with bread, pap (ogi), or custard.",
+      "prep_time": 20,
+      "cook_time": 25,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Black-eyed beans",
+          "quantity": 2,
+          "unit": "cup",
+          "notes": "peeled"
+        },
+        {
+          "name": "Onions",
+          "quantity": 1,
+          "unit": "piece",
+          "notes": "chopped"
+        },
+        { "name": "Scotch bonnet pepper", "quantity": 1, "unit": "piece" },
+        {
+          "name": "Vegetable oil",
+          "quantity": 500,
+          "unit": "ml",
+          "notes": "for frying"
+        },
+        { "name": "Seasoning cube", "quantity": 1, "unit": "cube" },
+        { "name": "Salt", "quantity": 1, "unit": "to_taste" }
+      ],
+      "notes": [
+        "Batter should be thick for best results",
+        "Whisking adds air and makes akara fluffy",
+        "Oil must be very hot before frying",
+        "Popular breakfast with pap (ogi/akamu)"
+      ]
+    },
+    {
+      "title": "Abacha (African Salad)",
+      "description": "A popular Igbo cassava-based salad mixed with palm oil, ugba (fermented oil bean), and vegetables. Colorful, tangy, and often served at traditional ceremonies.",
+      "ethnicity": "igbo",
+      "category": "snacks",
+      "instructions": "1. Soak abacha (cassava flakes) in warm water for 5 minutes, drain.\n2. Mix abacha with little palm oil until coated.\n3. Add ugba (oil bean seeds) to abacha.\n4. Add ground crayfish, ehuru (calabash nutmeg), and ground pepper.\n5. Add sliced garden eggs, utazi leaves.\n6. Mix in stockfish flakes and dried fish.\n7. Add more palm oil to desired consistency.\n8. Garnish with sliced onions and garden eggs.\n9. Serve with ponmo (cow skin) and chilled drink.",
+      "prep_time": 15,
+      "cook_time": 0,
+      "servings": 4,
+      "ingredients": [
+        { "name": "Abacha (cassava flakes)", "quantity": 300, "unit": "g" },
+        { "name": "Ugba (oil bean seeds)", "quantity": 200, "unit": "g" },
+        { "name": "Palm oil", "quantity": 100, "unit": "ml" },
+        {
+          "name": "Stockfish",
+          "quantity": 100,
+          "unit": "g",
+          "notes": "cooked and flaked"
+        },
+        {
+          "name": "Dried fish",
+          "quantity": 50,
+          "unit": "g",
+          "notes": "deboned"
+        },
+        { "name": "Ground crayfish", "quantity": 2, "unit": "tbsp" },
+        {
+          "name": "Ehuru (calabash nutmeg)",
+          "quantity": 2,
+          "unit": "seed",
+          "notes": "ground"
+        },
+        {
+          "name": "Utazi leaves",
+          "quantity": 5,
+          "unit": "piece",
+          "notes": "sliced thin"
+        },
+        {
+          "name": "Garden eggs",
+          "quantity": 3,
+          "unit": "piece",
+          "notes": "sliced"
+        },
+        {
+          "name": "Scotch bonnet pepper",
+          "quantity": 1,
+          "unit": "piece",
+          "notes": "ground"
+        },
+        { "name": "Onions", "quantity": 1, "unit": "piece", "notes": "sliced" },
+        { "name": "Seasoning cubes", "quantity": 2, "unit": "cube" },
+        { "name": "Salt", "quantity": 1, "unit": "to_taste" }
+      ],
+      "notes": [
+        "No cooking required - it's a salad",
+        "Can add boiled eggs for extra protein",
+        "Adjust palm oil to personal preference",
+        "Best served chilled"
+      ]
+    },
+    {
+      "title": "Suya",
+      "description": "The famous Hausa spiced grilled meat skewers. Beef, chicken, or goat marinated in yaji (peanut-based spice blend) and grilled over open flame until smoky and tender.",
+      "ethnicity": "hausa",
+      "category": "snacks",
+      "instructions": "1. Cut beef into thin strips or cubes.\n2. Thread meat onto skewers.\n3. Mix yaji spice with groundnut oil to make paste.\n4. Coat meat generously with yaji paste.\n5. Let marinate for 30 minutes (or overnight for best flavor).\n6. Grill over charcoal or open flame, turning frequently (10-15 minutes).\n7. Brush with more oil during grilling to prevent drying.\n8. Sprinkle additional yaji spice before serving.\n9. Serve with sliced onions, tomatoes, and cabbage.",
+      "prep_time": 20,
+      "cook_time": 15,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Beef",
+          "quantity": 500,
+          "unit": "g",
+          "notes": "cut into strips"
+        },
+        { "name": "Yaji spice (suya spice)", "quantity": 4, "unit": "tbsp" },
+        { "name": "Groundnut oil", "quantity": 3, "unit": "tbsp" },
+        { "name": "Onions", "quantity": 1, "unit": "piece", "notes": "sliced" },
+        {
+          "name": "Tomatoes",
+          "quantity": 2,
+          "unit": "piece",
+          "notes": "sliced"
+        },
+        {
+          "name": "Cabbage",
+          "quantity": 100,
+          "unit": "g",
+          "notes": "shredded"
+        },
+        { "name": "Salt", "quantity": 1, "unit": "to_taste" }
+      ],
+      "notes": [
+        "Yaji spice contains ground peanuts, ginger, and spices",
+        "Best grilled over charcoal for smoky flavor",
+        "Can use chicken, goat, or ram meat",
+        "Popular street food and party snack"
+      ]
+    },
+    {
+      "title": "Moi Moi",
+      "description": "Steamed bean pudding made from blended beans, peppers, and onions, often enriched with eggs, fish, or corned beef. Popular across Nigeria as side dish or main meal.",
+      "ethnicity": "yoruba",
+      "category": "snacks",
+      "instructions": "1. Soak and peel black-eyed beans.\n2. Blend beans with peppers, onions, and little water until smooth.\n3. Add palm oil, ground crayfish, seasoning cubes, and salt to batter.\n4. Whisk in small amount of warm water to desired consistency.\n5. Pour into greased moi moi containers or leaves.\n6. Add boiled eggs, fish, or corned beef to each container.\n7. Steam in pot with water for 45-60 minutes.\n8. Check doneness with knife (should come out clean).\n9. Allow to cool slightly before serving.",
+      "prep_time": 30,
+      "cook_time": 60,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Black-eyed beans",
+          "quantity": 2,
+          "unit": "cup",
+          "notes": "peeled"
+        },
+        { "name": "Red bell peppers", "quantity": 2, "unit": "piece" },
+        { "name": "Scotch bonnet peppers", "quantity": 2, "unit": "piece" },
+        { "name": "Onions", "quantity": 1, "unit": "piece" },
+        { "name": "Palm oil", "quantity": 100, "unit": "ml" },
+        { "name": "Ground crayfish", "quantity": 2, "unit": "tbsp" },
+        {
+          "name": "Boiled eggs",
+          "quantity": 3,
+          "unit": "piece",
+          "notes": "optional"
+        },
+        {
+          "name": "Mackerel fish",
+          "quantity": 1,
+          "unit": "piece",
+          "notes": "optional"
+        },
+        { "name": "Seasoning cubes", "quantity": 3, "unit": "cube" },
+        { "name": "Salt", "quantity": 1, "unit": "to_taste" }
+      ],
+      "notes": [
+        "Traditionally wrapped in banana leaves (ewe eran)",
+        "Can use plastic containers or aluminum foil",
+        "Packed with plant-based protein",
+        "Great for breakfast or as side dish"
+      ]
+    },
+    {
+      "title": "Nkwobi",
+      "description": "A spicy Igbo delicacy made from cow foot, seasoned with palm oil sauce, utazi leaves, and spices. Popular at restaurants and beer parlors, often enjoyed as evening snack.",
+      "ethnicity": "igbo",
+      "category": "snacks",
+      "instructions": "1. Cut cow foot into pieces, wash thoroughly.\n2. Season with salt, pepper, and onions.\n3. Cook in pressure cooker or pot until very tender (1-2 hours).\n4. Cut cooked cow foot into smaller bite-size pieces.\n5. In bowl, mix palm oil with potash (edible) to form thick yellow paste.\n6. Add ground pepper, ehuru, uziza seeds.\n7. Add utazi leaves, sliced onions.\n8. Mix in cow foot pieces until well coated.\n9. Garnish with more utazi leaves and serve immediately.",
+      "prep_time": 15,
+      "cook_time": 90,
+      "servings": 4,
+      "ingredients": [
+        { "name": "Cow foot", "quantity": 1, "unit": "kg" },
+        { "name": "Palm oil", "quantity": 150, "unit": "ml" },
+        { "name": "Edible potash", "quantity": 1, "unit": "tsp" },
+        {
+          "name": "Utazi leaves",
+          "quantity": 1,
+          "unit": "handful",
+          "notes": "sliced"
+        },
+        {
+          "name": "Ehuru (calabash nutmeg)",
+          "quantity": 2,
+          "unit": "seed",
+          "notes": "ground"
+        },
+        {
+          "name": "Uziza seeds",
+          "quantity": 1,
+          "unit": "tsp",
+          "notes": "ground"
+        },
+        {
+          "name": "Scotch bonnet pepper",
+          "quantity": 2,
+          "unit": "piece",
+          "notes": "ground"
+        },
+        { "name": "Onions", "quantity": 1, "unit": "piece", "notes": "sliced" },
+        { "name": "Seasoning cubes", "quantity": 2, "unit": "cube" },
+        { "name": "Salt", "quantity": 1, "unit": "to_taste" }
+      ],
+      "notes": [
+        "Potash thickens the palm oil sauce",
+        "Traditionally served in wooden mortar",
+        "Best enjoyed with cold drink",
+        "Can use goat meat as alternative"
+      ]
+    },
+    {
+      "title": "Ofada Rice with Ayamase Sauce",
+      "description": "Unpolished local rice served with spicy green pepper designer stew (Ayamase). A Yoruba delicacy with rich flavors from green peppers and assorted meats.",
+      "ethnicity": "yoruba",
+      "category": "rice-dishes",
+      "instructions": "Rice: 1. Wash Ofada rice thoroughly to remove chaff. 2. Parboil for 5 minutes, drain. 3. Cook with fresh water until tender.\n\nAyamase: 1. Blend green peppers with minimal water. 2. Bleach palm oil until clear. 3. Fry sliced onions, add locust beans. 4. Add green pepper paste, fry until oil separates. 5. Add assorted meats, stockfish, ponmo. 6. Season and simmer for 15 minutes.\n\nServe hot rice with Ayamase sauce.",
+      "prep_time": 25,
+      "cook_time": 50,
+      "servings": 6,
+      "ingredients": [
+        { "name": "Ofada rice (local rice)", "quantity": 3, "unit": "cup" },
+        { "name": "Green bell peppers", "quantity": 10, "unit": "piece" },
+        { "name": "Scotch bonnet peppers", "quantity": 5, "unit": "piece" },
+        { "name": "Palm oil", "quantity": 200, "unit": "ml" },
+        { "name": "Assorted meat", "quantity": 500, "unit": "g" },
+        { "name": "Stockfish", "quantity": 100, "unit": "g" },
+        { "name": "Ponmo (cow skin)", "quantity": 200, "unit": "g" },
+        { "name": "Locust beans (iru)", "quantity": 2, "unit": "tbsp" },
+        { "name": "Onions", "quantity": 2, "unit": "piece", "notes": "sliced" },
+        { "name": "Seasoning cubes", "quantity": 3, "unit": "cube" },
+        { "name": "Salt", "quantity": 1, "unit": "to_taste" }
+      ],
+      "notes": [
+        "Ofada rice has distinctive aroma",
+        "Green peppers give sauce its color",
+        "Palm oil must be bleached properly",
+        "Often served in traditional leaves"
+      ]
+    },
+    {
+      "title": "Okpa",
+      "description": "A steamed pudding made from Bambara nut flour, popular in Igbo land especially Enugu. Naturally delicious, protein-rich, and gluten-free. Often called 'fast food' of the East.",
+      "ethnicity": "igbo",
+      "category": "snacks",
+      "instructions": "1. Mix Bambara flour with water to form smooth batter.\n2. Add palm oil, ground crayfish, and pepper.\n3. Add seasoning cubes and salt to taste.\n4. Mix in sliced onions and dry fish (optional).\n5. Pour batter into banana leaves or nylon wraps.\n6. Fold leaves to seal properly.\n7. Arrange in steaming pot with water.\n8. Steam for 45-60 minutes until firm.\n9. Serve hot or warm.",
+      "prep_time": 15,
+      "cook_time": 60,
+      "servings": 6,
+      "ingredients": [
+        { "name": "Bambara nut flour", "quantity": 3, "unit": "cup" },
+        { "name": "Palm oil", "quantity": 100, "unit": "ml" },
+        { "name": "Ground crayfish", "quantity": 2, "unit": "tbsp" },
+        {
+          "name": "Scotch bonnet pepper",
+          "quantity": 2,
+          "unit": "piece",
+          "notes": "ground"
+        },
+        { "name": "Onions", "quantity": 1, "unit": "piece", "notes": "sliced" },
+        {
+          "name": "Dried fish",
+          "quantity": 50,
+          "unit": "g",
+          "notes": "optional"
+        },
+        { "name": "Seasoning cubes", "quantity": 2, "unit": "cube" },
+        { "name": "Salt", "quantity": 1, "unit": "to_taste" },
+        { "name": "Water", "quantity": 2, "unit": "cup" }
+      ],
+      "notes": [
+        "Bambara nut is very nutritious",
+        "Don't add too many ingredients - keep simple",
+        "Best enjoyed fresh and hot",
+        "Popular breakfast or snack"
+      ]
+    },
+    {
+      "title": "Tuwo Masara",
+      "description": "Northern Nigerian swallow made from corn flour. A staple Hausa food that's rich in carbohydrates and fiber, served with various soups like Miyan Kuka.",
+      "ethnicity": "hausa",
+      "category": "swallow",
+      "instructions": "1. Boil water in pot until rolling boil.\n2. Mix corn flour with cold water to form paste.\n3. Pour paste into boiling water while stirring vigorously.\n4. Keep stirring to prevent lumps.\n5. Reduce heat and continue stirring until smooth.\n6. The mixture should be thick and stretchy.\n7. Cover and let steam for 3-5 minutes.\n8. Mold into balls or serve in bowls.\n9. Serve hot with Miyan Kuka, Miyan Taushe, or soup of choice.",
+      "prep_time": 5,
+      "cook_time": 20,
+      "servings": 4,
+      "ingredients": [
+        { "name": "Corn flour (maize flour)", "quantity": 2, "unit": "cup" },
+        { "name": "Water", "quantity": 5, "unit": "cup" }
+      ],
+      "notes": [
+        "Mix with cold water first to avoid lumps",
+        "Should be smooth and pliable",
+        "Provides sustained energy",
+        "Can also make Tuwo Dawa with guinea corn flour"
+      ]
+    },
+    {
+      "title": "Pounded Yam with Egusi Soup",
+      "description": "A classic Nigerian combination - smooth, stretchy pounded yam paired with rich egusi soup. The pounded yam serves as neutral base for the flavorful soup.",
+      "ethnicity": "igbo",
+      "category": "swallow",
+      "instructions": "Pounded Yam: 1. Peel and cut yam into chunks. 2. Boil until very soft. 3. Pound in mortar with pestle until smooth and stretchy. 4. Form into balls.\n\nEgusi: Follow Egusi Soup recipe.\n\nServe pounded yam hot with egusi soup, assorted meats.",
+      "prep_time": 25,
+      "cook_time": 50,
+      "servings": 5,
+      "ingredients": [
+        { "name": "White yam", "quantity": 2, "unit": "kg" },
+        {
+          "name": "Egusi (melon seeds)",
+          "quantity": 1.5,
+          "unit": "cup",
+          "notes": "ground"
+        },
+        { "name": "Palm oil", "quantity": 120, "unit": "ml" },
+        { "name": "Assorted meat", "quantity": 400, "unit": "g" },
+        { "name": "Ugu leaves", "quantity": 2, "unit": "handful" },
+        { "name": "Stockfish", "quantity": 80, "unit": "g" },
+        { "name": "Ground crayfish", "quantity": 2, "unit": "tbsp" },
+        { "name": "Scotch bonnet peppers", "quantity": 2, "unit": "piece" },
+        { "name": "Onions", "quantity": 1, "unit": "piece" },
+        { "name": "Seasoning cubes", "quantity": 2, "unit": "cube" },
+        { "name": "Salt", "quantity": 1, "unit": "to_taste" }
+      ],
+      "notes": [
+        "Pounding is traditional but can use yam pounder",
+        "Balance of textures - smooth yam with hearty soup",
+        "Often reserved for special occasions",
+        "A benchmark combination in Nigerian cuisine"
+      ]
+    }
+  ]
+}
